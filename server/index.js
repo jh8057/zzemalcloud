@@ -1,8 +1,21 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 5000;
+
+//req.body를 위한 패키지
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+
+//환경변수config
+const configEnv = require("./config.js");
+
+//기본 라우터 삽입
+const port = configEnv.PORT || 3000;
 const routes = require("./routes");
 app.use(routes);
+
+//인증 페이지 router middleware
+const authRoute = require("./routes/auth");
+app.use("/api/user", authRoute);
 
 const config = require("../nuxt.config.js");
 const { Nuxt, Builder } = require("nuxt");

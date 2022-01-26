@@ -1,11 +1,9 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
 // define the about route
 router.get("/about", function (req, res) {
-  return data;
+  res.json({ data: "About Page" });
 });
-
-let data = "about data";
 
 module.exports = router;

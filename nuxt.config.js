@@ -30,6 +30,7 @@ module.exports = {
   modules: [
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
+    "@nuxtjs/axios",
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -41,4 +42,6 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  telemetry: true,
 };
