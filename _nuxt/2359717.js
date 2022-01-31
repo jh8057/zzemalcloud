@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{492:function(e,l,n){"use strict";n.r(l);var t={},o=n(63),component=Object(o.a)(t,(function(){var e=this,l=e.$createElement;return(e._self._c||l)("footer",[e._v("Email : luckysymbol13@gmail.com")])}),[],!1,null,null,null);l.default=component.exports}}]);
