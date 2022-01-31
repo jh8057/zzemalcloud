@@ -43,5 +43,12 @@ module.exports = {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
+  // 서버개발 참여여부
   telemetry: true,
+
+    //github page
+    target : 'static',
+    router : {
+      base : '/zzemalcloud/'
+    }
 };
