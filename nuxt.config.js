@@ -12,7 +12,7 @@ module.exports = {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ["~/assets/style"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -46,9 +46,9 @@ module.exports = {
   // 서버개발 참여여부
   telemetry: true,
 
-    //github page
-    target : 'static',
-    router : {
-      base : '/zzemalcloud/'
-    }
+  //github page
+  target: "static",
+  router: {
+    base: "/zzemalcloud/",
+  },
 };

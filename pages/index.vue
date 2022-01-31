@@ -4,6 +4,7 @@
     <login-comp />
     <footer-one />
     <nuxt-link to="/aboutPage"> GO </nuxt-link>
+    <nuxt-link to="/DiaryMain"> Diary </nuxt-link>
   </div>
 </template>
 
