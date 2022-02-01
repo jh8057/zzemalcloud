@@ -5,10 +5,30 @@ module.exports = {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      { hid: "description", name: "description", content: "Color Diary" },
       { name: "format-detection", content: "telephone=no" },
+      { name: "author", content: "zzemal" },
+      // { property:"og:url", content:"" },
+      // { property:"og:title", content:"" },
+      // { property:"og:description", content:"" },
+      // { property:"og:image", content:"" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      //menu icon
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      //font
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;1,400&display=swap",
+      },
+    ],
+    //icon
+    script: [
+      {
+        src: "https://kit.fontawesome.com/b50a7e6f6b.js",
+        crossorigin: "anonymous",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

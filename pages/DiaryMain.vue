@@ -1,6 +1,7 @@
 <template>
   <div class="DiaryWrapper">
-    <nuxt-link to="/">BACK</nuxt-link>
+    <nuxt-link to="/" class="navi"><i class="fas fa-angle-left" id="icons" /></i></nuxt-link>
+
     <h1 class="Diary__title">Diary</h1>
     <diary-comp />
   </div>
@@ -23,7 +24,15 @@ export default {
   text-align: center;
 }
 .DiaryWrapper {
-  height: 100vh;
+  min-height: 96.4vh;
   background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+}
+#icons {
+  color: black;
+  margin-left: 10px;
+  font-size: 50px;
+}
+.navi {
+  position: absolute;
 }
 </style>
