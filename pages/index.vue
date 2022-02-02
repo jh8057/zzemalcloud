@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index__wrapper">
     <header-comp />
     <login-comp />
     <footer-one />

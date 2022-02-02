@@ -4,6 +4,8 @@
 
     <h1 class="Diary__title">Diary</h1>
     <diary-comp />
+    <diary-comp />
+    <diary-comp />
   </div>
 </template>
 
@@ -20,9 +22,6 @@ export default {
 </script>
 
 <style>
-.Diary__title {
-  text-align: center;
-}
 .DiaryWrapper {
   min-height: 96.4vh;
   background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
