@@ -1,6 +1,6 @@
 <template>
   <div class="index__wrapper">
-    <header-comp />
+    <!-- <header-comp /> -->
     <login-comp />
     <footer-one />
     <nuxt-link to="/aboutPage"> GO </nuxt-link>
