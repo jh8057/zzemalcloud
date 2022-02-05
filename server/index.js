@@ -17,6 +17,10 @@ app.use(routes);
 const authRoute = require("./routes/auth");
 app.use("/api/user", authRoute);
 
+//DB router middleware
+const dbRoute = require("./routes/dbcon");
+app.use("/api/db", dbRoute);
+
 const config = require("../nuxt.config.js");
 const { Nuxt, Builder } = require("nuxt");
 const nuxt = new Nuxt(config);

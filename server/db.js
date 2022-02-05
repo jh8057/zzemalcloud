@@ -1,5 +1,5 @@
 const mysql = require("mysql");
-const pool = mysql.createPool({
+const DB = mysql.createPool({
   connetionLimit: 10,
   host: "mysql",
   user: "root",
@@ -7,4 +7,6 @@ const pool = mysql.createPool({
   database: "myapp",
 });
 
-exports.pool = pool;
+DB.connect();
+
+exports.DB = DB;
