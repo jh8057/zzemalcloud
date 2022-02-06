@@ -1,12 +1,19 @@
 const mysql = require("mysql");
-const DB = mysql.createPool({
+const DBpool = mysql.createPool({
   connetionLimit: 10,
-  host: "mysql",
+  host: "localhost",
+  port:'3306',
   user: "root",
-  password: "zzemal",
-  database: "myapp",
+  password: "password",
+  database: "testDB"
 });
 
-DB.connect();
+function getConnection(callback){
+  DBpool.getConnection((err,conn)=>{
+    if(!err){
+      callback(conn);
+    }
+  })
+}
 
-exports.DB = DB;
+module.exports = getConnection;

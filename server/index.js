@@ -3,7 +3,8 @@ const app = express();
 
 //req.body를 위한 패키지
 const bodyParser = require("body-parser");
-app.use(bodyParser.json());
+app.use(bodyParser.json({type:'application/json'}));
+app.use(bodyParser.urlencoded({extended:true}));
 
 //환경변수config
 const configEnv = require("./config.js");

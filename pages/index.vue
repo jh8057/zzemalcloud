@@ -5,6 +5,7 @@
     <footer-one />
     <nuxt-link to="/aboutPage"> GO </nuxt-link>
     <nuxt-link to="/DiaryMain"> Diary </nuxt-link>
+    <nuxt-link to="/DbMain"> DB </nuxt-link>
   </div>
 </template>
 

@@ -1,12 +1,21 @@
 const express = require("express");
 const router = express.Router();
 
-const db = require("../db.js");
+const getConnection = require("../db.js");
 
-app.get("/users", (req, res) => {
-  db.connection.query("SELECT * from users", (err, results) => {
-    if (err) throw error;
-    console.log("User info is: ", results);
-    res.send(results);
-  });
+router.get("/users", (req, res) => {
+  console.log("db connect start")
+  getConnection((conn)=>{
+    conn.query('select * from JHTable;',(err,result)=>{
+      if(err){
+        return res.send(400);
+      }
+      res.send(result)
+      conn.release();
+    })
+  })
+  console.log("db connect end")
+
 });
+
+module.exports = router;
