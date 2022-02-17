@@ -22,6 +22,13 @@
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 
+/**
+  * vue-class-component v7.2.6
+  * (c) 2015-present Evan You
+  * @license MIT
+  */
+
+
 /*!
   * vue-router v3.5.3
   * (c) 2021 Evan You
