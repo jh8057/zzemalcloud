@@ -5,11 +5,12 @@
   </div>
 </template>
 
-<script>
-import Vue from "vue/types/umd";
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
 
+@Component
 export default class Message extends Vue {
-  message: String = "메세지를 입력해주세요";
+  message: String = "this is mesg";
 }
 </script>
 
