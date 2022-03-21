@@ -11,27 +11,31 @@ const SECRET_KEY = configEnv.SECRET_KEY;
 //Login 토큰생성
 router.post("/login", (req, res) => {
   const memID = req.body.memID;
+  const memPW = req.body.memPW;
 
-  const token = jwt.sign(
-    //payload
-    {
-      type: "JWT",
-      memID,
-    },
-    //secretkey
-    SECRET_KEY,
-    //option
-    {
-      expiresIn: "15m",
-      issuer: "토큰발급자",
-    }
-  );
+  if (memID === "1005" && memPW === "0511") {
+    const token = jwt.sign(
+      //payload
+      {
+        type: "JWT",
+        memID,
+      },
+      //secretkey
+      SECRET_KEY,
+      //option
+      {
+        expiresIn: "15m",
+        issuer: "토큰발급자",
+      }
+    );
 
-  return res.status(200).json({
-    code: 200,
-    msg: "토큰이 발급되었습니다",
-    token,
-  });
+    return res.status(200).json({
+      code: 200,
+      msg: "토큰이 발급되었습니다",
+      token,
+    });
+  }
+  return res.json({ msg: "다시 시도해보세요" });
 });
 
 //토큰 체크 & 토큰으로 데이터 얻어오기

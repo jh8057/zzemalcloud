@@ -32,11 +32,14 @@ export default {
     async login() {
       const params = {
         memID: this.memID,
-        // memPW: this.memPW,
+        memPW: this.memPW,
       };
       let result = await this.$axios.$post("api/user/login", params);
       console.log(result);
-      this.token = result.token;
+      if (result.token) {
+        this.token = result.token;
+        this.$router.push("/DiaryMain");
+      }
     },
     async tokenCheck() {
       const params = {
