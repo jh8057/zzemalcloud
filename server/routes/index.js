@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-// define the about route
-// const dbcon = require("./dbcon.js");
-
-// router.use("/dbcon", dbcon);
+const about = require("./about");
+router.use("/about", about);
 
 module.exports = router;

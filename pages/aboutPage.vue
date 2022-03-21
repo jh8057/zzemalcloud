@@ -15,7 +15,7 @@ export default {
   methods: {
     async getAboutData() {
       let result = await this.$axios.$get("/about");
-      this.result = result.data;
+      this.result = result.msg;
     },
   },
 };
