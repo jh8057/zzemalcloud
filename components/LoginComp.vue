@@ -15,7 +15,7 @@
       <a @click="login">Login</a>
     </fieldset>
     <p>HINT : U BirthDay / J BirthDay</p>
-    <button @click="tokenCheck">Check</button>
+    <button @click="tokenCheck">Login Check</button>
   </div>
 </template>
 
@@ -38,6 +38,8 @@ export default {
       console.log(result);
       if (result.token) {
         this.token = result.token;
+
+        //set Cookie
         this.$router.push("/DiaryMain");
       }
     },
@@ -45,9 +47,12 @@ export default {
       const params = {
         token: this.token,
       };
-      let result = await this.$axios.$get("api/user/tokenCheck", { params });
-      console.log(result);
-      this.token = result.token;
+      if (this.token) {
+        let result = await this.$axios.$get("api/user/tokenCheck", { params });
+        console.log(result);
+      } else {
+        alert("Login해주세요");
+      }
     },
   },
 };
