@@ -3,10 +3,11 @@
     <!-- <header-comp /> -->
     <login-comp />
     <message />
+
+    <nuxt-link to="/aboutPage"> About Page </nuxt-link> <br />
+    <nuxt-link to="/DiaryMain"> Diary </nuxt-link> <br />
+    <nuxt-link to="/DbMain"> DB </nuxt-link><br />
     <footer-one />
-    <nuxt-link to="/aboutPage"> GO </nuxt-link>
-    <nuxt-link to="/DiaryMain"> Diary </nuxt-link>
-    <nuxt-link to="/DbMain"> DB </nuxt-link>
   </div>
 </template>
 
