@@ -2,22 +2,20 @@
   <div>
     <h1>Stock</h1>
     <message></message>
-    <div>{{ message }}</div>
     <button>click</button>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+<script >
 import message from "~/components/message.vue";
 
-@Component({
+export default {
   components: {
     message,
   },
-})
-@Component
-export default class extends Vue {
-  message: String = "STOCK";
-}
-</script>
+  data() {
+    return {
+      message: "",
+    };
+  },
+};
