@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Stock</h1>
+    <h1>OpenApi</h1>
     <message></message>
     <button>click</button>
   </div>
