@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/%08openApiPage", {data:[{}],fetch:{},mutations:void 0});
