@@ -92,4 +92,4 @@ sw.*
 package-lock.json
 
 # config file
-/server/config
+/server/config/secret.js
