@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const configEnv = require("../server/config.js");
+const configEnv = require("../server/config/config.js");
 const SECRET_KEY = configEnv.SECRET_KEY;
 exports.auth = (req, res, next) => {
   // 인증 완료

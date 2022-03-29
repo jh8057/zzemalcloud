@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 //환경변수config
-const configEnv = require("../config.js");
+const configEnv = require("../config/config.js");
 const jwt = require("jsonwebtoken");
 
 const { auth } = require("../../middleware/checkAuth.js");

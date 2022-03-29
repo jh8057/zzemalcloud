@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 package-lock.json
+
+# config file
+/server/config

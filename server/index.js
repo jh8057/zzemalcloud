@@ -7,7 +7,7 @@ app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //환경변수config
-const configEnv = require("./config.js");
+const configEnv = require("./config/config.js");
 
 //기본 라우터 삽입
 const port = configEnv.PORT || 3000;
