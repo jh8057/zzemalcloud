@@ -2,7 +2,7 @@
   <div>
     <h1>OpenApi</h1>
     <message></message>
-    <button>click</button>
+    <button @click="getNaverSearch">click</button>
   </div>
 </template>
 
@@ -17,5 +17,11 @@ export default {
     return {
       message: "",
     };
+  },
+  methods: {
+    async getNaverSearch(){
+      let data = await this.$axios.$get("/naverSearch/search/blog")
+      console.log('data',data)
+    }
   },
 };
