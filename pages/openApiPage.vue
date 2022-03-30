@@ -2,7 +2,10 @@
   <div>
     <h1>OpenApi</h1>
     <message></message>
+    <hr>
+    <h1>NaverLogin</h1>
     <button @click="getNaverSearch">click</button>
+    <hr>
   </div>
 </template>
 

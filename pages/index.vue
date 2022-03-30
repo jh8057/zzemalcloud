@@ -2,7 +2,7 @@
   <div class="index__wrapper">
     <login-comp />
 
-    <nuxt-link to="/stockPage"> Stock Page </nuxt-link> <br />
+    <nuxt-link to="/openApiPage"> API Page </nuxt-link> <br />
     <nuxt-link to="/aboutPage"> About Page </nuxt-link> <br />
     <nuxt-link to="/DiaryMain"> Diary </nuxt-link> <br />
     <nuxt-link to="/DbMain"> DB </nuxt-link><br />
@@ -10,13 +10,11 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script>
 import footerOne from "~/components/footerOne.vue";
 import LoginComp from "~/components/LoginComp.vue";
 
-export default Vue.extend({
+export default{
   components: { footerOne, LoginComp },
-  name: "IndexPage",
-});
+};
 </script>
