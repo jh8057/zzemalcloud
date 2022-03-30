@@ -2,7 +2,7 @@
   <div class="index__wrapper">
     <login-comp />
 
-    <nuxt-link to="/openApiPage"> API Page </nuxt-link> <br />
+    <nuxt-link to="/openApi"> API Page </nuxt-link> <br />
     <nuxt-link to="/aboutPage"> About Page </nuxt-link> <br />
     <nuxt-link to="/DiaryMain"> Diary </nuxt-link> <br />
     <nuxt-link to="/DbMain"> DB </nuxt-link><br />

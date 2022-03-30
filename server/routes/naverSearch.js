@@ -2,16 +2,20 @@
 // 네이버 검색 Open API 예제 - 블로그 검색
 
 
-import config from "~/server/config/config.js"
+const secret = require("../config/secret.js")
 
 const express = require("express");
 const router = express.Router();
 
-const client_id = config.ClientID;
-const client_secret = config.ClientSecret;
+const client_id = secret.ClientID;
+const client_secret = secret.ClientSecret;
 
 router.get('/search/blog', function (req, res) {
-   let api_url = 'https://openapi.naver.com/v1/search/blog?query=' + encodeURI(req.query.query); // json 결과
+    let api_url = 'https://openapi.naver.com/v1/search/blog?query=' + encodeURI(req.query.keyword); // json 결과
+
+    console.log('SEARCH API START')
+    console.log('--------------------')
+    console.log('keyword : ', req.query.keyword)
 
    let request = require('request');
    let options = {
