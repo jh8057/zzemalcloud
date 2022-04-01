@@ -7,6 +7,8 @@ const secret = require("../config/secret.js")
 const express = require("express");
 const router = express.Router();
 
+let request = require('request');
+
 const client_id = secret.ClientID;
 const client_secret = secret.ClientSecret;
 
@@ -16,8 +18,8 @@ router.get('/search/blog', function (req, res) {
     console.log('SEARCH API START')
     console.log('--------------------')
     console.log('keyword : ', req.query.keyword)
+    console.log('--------------------')
 
-   let request = require('request');
    let options = {
        url: api_url,
        headers: {'X-Naver-Client-Id':client_id, 'X-Naver-Client-Secret': client_secret}
@@ -33,5 +35,24 @@ router.get('/search/blog', function (req, res) {
    });
  });
 
-
+ 
+router.post('/search/trend', function (req, res) {
+  
+  console.log('TREND API START')
+  console.log('--------------------')
+  console.log('keyword : ', req.body.keyword.keywordGroups)
+  request.post({
+        url: 'https://openapi.naver.com/v1/datalab/search',
+        body: JSON.stringify(req.body.keyword),
+        headers: {
+            'X-Naver-Client-Id': client_id,
+            'X-Naver-Client-Secret': client_secret,
+            'Content-Type': 'application/json'
+        }
+    },
+    function (error, response, body) {
+        console.log("response status : ",response.statusCode);
+        res.end(body);
+    });
+});
  module.exports = router;
