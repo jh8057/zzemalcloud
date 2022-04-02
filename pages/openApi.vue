@@ -15,7 +15,7 @@
     <hr />
     <h2>NaverTrend</h2>
     <button @click="getNaverTrend">trend</button>
-    <ul class="naverSearchTrend">
+    <ul class="naverSearchTrend" v-if="trend">
       <li>{{ trendTitle }}</li>
       <li>{{ trendKeyword }}</li>
       <li v-for="data in trendData" :key="data.period">
