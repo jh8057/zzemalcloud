@@ -15,12 +15,18 @@
       <a @click="login">Login</a>
     </fieldset>
     <p>HINT : U BirthDay / J BirthDay</p>
+    <naver-login />
     <button @click="tokenCheck">Login Check</button>
   </div>
 </template>
 
 <script>
+import naverLogin from "./naverLogin.vue";
+
 export default {
+  components: {
+    naverLogin,
+  },
   data() {
     return {
       token: "",

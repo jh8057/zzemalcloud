@@ -14,6 +14,7 @@
     </ul>
     <hr />
     <h2>NaverTrend</h2>
+    <div>localhost:3000에서 해야됨</div>
     <button @click="getNaverTrend">trend</button>
     <ul class="naverSearchTrend" v-if="trend">
       <li>{{ trendTitle }}</li>
