@@ -28,6 +28,7 @@ module.exports = {
         src: "https://kit.fontawesome.com/b50a7e6f6b.js",
         crossorigin: "anonymous",
       },
+      { src : "https://cdn.jsdelivr.net/npm/chart.js" },
     ],
   },
 
