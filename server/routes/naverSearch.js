@@ -9,8 +9,8 @@ const router = express.Router();
 
 let request = require('request');
 
-const client_id = secret.ClientID;
-const client_secret = secret.ClientSecret;
+const client_id = secret.ClientID || '';
+const client_secret = secret.ClientSecret || '';
 
 router.get('/search/blog', function (req, res) {
     let api_url = 'https://openapi.naver.com/v1/search/blog?query=' + encodeURI(req.query.keyword); // json 결과

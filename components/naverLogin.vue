@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import secret from "~/server/config/secret";
+import config from "~/server/config/config";
 
 export default {
   head: {
@@ -23,7 +23,7 @@ export default {
   methods: {
     login() {
       const naverLogin = new naver.LoginWithNaverId({
-        clientId: secret.ClientID,
+        clientId: config.ClientID,
         callbackUrl: "http://127.0.0.1:3000",
         loginButton: { color: "green", type: 3, height: 40 },
       });
