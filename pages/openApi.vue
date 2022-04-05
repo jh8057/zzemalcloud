@@ -23,15 +23,17 @@
         {{ data.period }}//{{ data.ratio }}
       </li>
     </ul>
+    <chart />
   </div>
 </template>
 
 <script>
 import message from "~/components/message.vue";
-
+import chart from "~/components/chart.vue";
 export default {
   components: {
     message,
+    chart,
   },
   data() {
     return {
