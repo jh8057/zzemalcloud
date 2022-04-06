@@ -12,7 +12,8 @@
     "lint": "npm run lint:prettier",
     "lintfix": "prettier --write --list-different .",
     "test": "jest",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "hello":"echo hello world"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
