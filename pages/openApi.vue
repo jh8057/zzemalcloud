@@ -23,7 +23,7 @@
         {{ data.period }}//{{ data.ratio }}
       </li>
     </ul>
-    <chart />
+    <chart :data="data" />
   </div>
 </template>
 

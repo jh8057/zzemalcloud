@@ -7,24 +7,33 @@
 
 <script>
 export default {
+  props: {
+    trendData: { type: Object, default: () => ({}) },
+  },
   data() {
     return {
       labels: ["January", "February", "March", "April", "May", "June"],
+      dataDefault: [0, 10, 5, 2, 20, 30, 45],
     };
   },
   computed: {
     chartData() {
       return {
-        labels: this.labels,
+        labels: this.labelData,
         datasets: [
           {
             label: "My First dataset",
             backgroundColor: "rgb(255, 99, 132)",
             borderColor: "rgb(255, 99, 132)",
-            data: [0, 10, 5, 2, 20, 30, 45],
           },
         ],
       };
+    },
+    labelData() {
+      return this.trendData?.period || this.labels;
+    },
+    datasetData() {
+      return this.trendData?.ratio || this.dataDefault;
     },
     chartConfig() {
       return {
