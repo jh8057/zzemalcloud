@@ -44,14 +44,14 @@ export default {
       };
     },
   },
-  mounted() {
-    this.renderChart();
-  },
   watch: {
     chartConfig(v) {
       console.log("Chart Data changed!", v);
       this.renderChart();
     },
+  },
+  mounted() {
+    this.renderChart();
   },
   methods: {
     renderChart() {

@@ -1,39 +1,44 @@
 <template>
   <div>
+    <go-home />
     <h1>OpenApi</h1>
-    <message></message>
+    <article class="naverSearchKeyword">
+      <h2>NaverSearch</h2>
+      <button @click="getNaverSearch">click</button>
+      <input v-model="keyword" />
+
+      <ul>
+        <li v-for="(item, i) in items" :key="`result_${i}`">
+          <span v-html="item.title"></span>
+        </li>
+      </ul>
+    </article>
     <hr />
-    <h2>NaverSearch</h2>
-    <button @click="getNaverSearch">click</button>
-    <input v-model="keyword" />
-    <hr />
-    <ul class="naverSearchResult">
-      <li v-for="(item, i) in items" :key="`result_${i}`">
-        <span v-html="item.title"></span>
-      </li>
-    </ul>
-    <hr />
-    <h2>NaverTrend</h2>
-    <div>localhost:3000에서 해야됨</div>
-    <button @click="getNaverTrend">trend</button>
-    <ul class="naverSearchTrend" v-if="trend">
-      <li>{{ trendTitle }}</li>
-      <li>{{ trendKeyword }}</li>
-      <li v-for="data in trendData" :key="data.period">
-        {{ data.period }}//{{ data.ratio }}
-      </li>
-    </ul>
-    <chart :trendData="trendData" />
+    <article class="naverSearchTrend">
+      <h2>NaverTrend</h2>
+      <div>localhost:3000에서 해야됨</div>
+      <button @click="getNaverTrend">trend</button>
+      <ul v-if="trend">
+        <li>{{ trendTitle }}</li>
+        <li>{{ trendKeyword }}</li>
+        <li v-for="data in trendData" :key="data.period">
+          {{ data.period }}//{{ data.ratio }}
+        </li>
+      </ul>
+      <chart v-if="trendData" :trendData="trendData" />
+    </article>
   </div>
 </template>
 
 <script>
 import message from "~/components/message.vue";
 import chart from "~/components/chart.vue";
+import goHome from "~/components/goHome.vue";
 export default {
   components: {
     message,
     chart,
+    goHome,
   },
   data() {
     return {
