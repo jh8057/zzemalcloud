@@ -35,3 +35,7 @@ Docker 와 AWS Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 4. naverAPIs
 
 5. typescript
+
+## referece
+
+- prettier Option : [link](https://prettier.io/docs/en/options.html)
