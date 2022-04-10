@@ -23,7 +23,7 @@
         {{ data.period }}//{{ data.ratio }}
       </li>
     </ul>
-    <chart :data="data" />
+    <chart :trendData="trendData" />
   </div>
 </template>
 
@@ -86,7 +86,6 @@ export default {
     },
     async getNaverTrend() {
       console.log("start naver trend");
-
       let params = { keyword: this.trendBody };
       let result = await this.$axios.$post("/naverSearch/search/trend", params);
       this.trend = result.results[0];

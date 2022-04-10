@@ -8,11 +8,11 @@
 <script>
 export default {
   props: {
-    trendData: { type: Object, default: () => ({}) },
+    trendData: { type: Array, default: () => [] },
   },
   data() {
     return {
-      labels: ["January", "February", "March", "April", "May", "June"],
+      labelsDefault: ["January", "February", "March", "April", "May", "June"],
       dataDefault: [0, 10, 5, 2, 20, 30, 45],
     };
   },
@@ -25,15 +25,16 @@ export default {
             label: "My First dataset",
             backgroundColor: "rgb(255, 99, 132)",
             borderColor: "rgb(255, 99, 132)",
+            data: this.datasetData,
           },
         ],
       };
     },
     labelData() {
-      return this.trendData?.period || this.labels;
+      return this.trendData?.map((data) => data.period) || this.labelsDefault;
     },
     datasetData() {
-      return this.trendData?.ratio || this.dataDefault;
+      return this.trendData?.map((data) => data.ratio) || this.dataDefault;
     },
     chartConfig() {
       return {
@@ -44,12 +45,28 @@ export default {
     },
   },
   mounted() {
-    console.log("chart", this.$refs.myChart);
-    console.log("char", this.chartConfig);
-    const myChart = new Chart(
-      document.getElementById("myChart"),
-      this.chartConfig
-    );
+    this.renderChart();
+  },
+  watch: {
+    chartConfig(v) {
+      console.log("Chart Data changed!", v);
+      this.renderChart();
+    },
+  },
+  methods: {
+    renderChart() {
+      // chart reset
+      let chartStatus = Chart.getChart("myChart"); // <canvas> id
+      if (chartStatus != undefined) {
+        chartStatus.destroy();
+      }
+
+      // make chart
+      const myChart = new Chart(
+        document.getElementById("myChart"),
+        this.chartConfig
+      );
+    },
   },
 };
 </script>
