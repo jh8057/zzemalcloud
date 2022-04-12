@@ -1,4 +1,7 @@
 
-export const hello = (req, res, next) =>{
+function hello (req, res, next) {
     console.log('hello')
+    next()
 }
+
+module.exports = hello;

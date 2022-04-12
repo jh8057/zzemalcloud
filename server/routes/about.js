@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-import {hello} from "~/middleware/hello.js"
+const hello = require("../../middleware/hello.js")
 
 // Test
 router.get("/", hello(),
