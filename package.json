@@ -13,13 +13,14 @@
     "lintfix": "prettier --write --list-different .",
     "test": "jest",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "hello":"echo hello world"
+    "hello": "echo hello world"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.19.3",
     "express": "^4.17.1",
+    "express-async-wrap": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "nuxt": "^2.15.8",

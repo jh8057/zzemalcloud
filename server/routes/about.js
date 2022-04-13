@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-const hello = require("../../middleware/hello.js")
+const _async = require('express-async-wrap');
+
+const hello = require("../middleware/hello.js")
 
 // Test
-router.get("/", hello(),
+router.get("/", hello,
  (req, res) => {
   return res.json({
     msg: "GET DATA FROM ABOUT SERVER!",
