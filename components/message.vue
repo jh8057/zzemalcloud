@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="text" v-model="message" />
-    <div>{{ message }}</div>
+    <span v-if="message">{{ message }}</span>
   </div>
 </template>
 
@@ -13,6 +13,3 @@ export default class Message extends Vue {
   message: String = "this is mesg";
 }
 </script>
-
-<style>
-</style>

@@ -13,7 +13,9 @@
     "lintfix": "prettier --write --list-different .",
     "test": "jest",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "hello": "echo hello world"
+    "hello": "echo hello world",
+    "jestwatch": "jest --watch",
+    "jestwatchall": "jest --watchAll"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
@@ -39,7 +41,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^27.4.4",
     "eslint-config-prettier": "^8.3.0",
-    "jest": "^27.4.4",
+    "jest": "^27.5.1",
     "prettier": "^2.5.1",
     "push-dir": "^0.4.1",
     "ts-jest": "^27.1.1",
