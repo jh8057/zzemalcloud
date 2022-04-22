@@ -1,6 +1,8 @@
 <template>
   <div class="DiaryWrapper">
-    <nuxt-link to="/" class="navi"><i class="fas fa-angle-left" id="icons" /></nuxt-link>
+    <nuxt-link to="/" class="navi"
+      ><i class="fas fa-angle-left" id="icons"
+    /></nuxt-link>
 
     <h1 class="Diary__title">Diary</h1>
     <diary-comp />
