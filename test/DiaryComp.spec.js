@@ -7,7 +7,7 @@ describe("DiaryComp", () => {
         expect(wrapper.vm).toBeTruthy()
     })
 
-    test( 'default props', ()=>{
+    test('default props', ()=>{
         const wrapper = mount(DiaryComp)
         expect(wrapper.props()).toEqual({
             RegDate : 100,
