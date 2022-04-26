@@ -1,7 +1,9 @@
 <template>
   <div class="randomBox">
-    {{ randomWord }}
-    <button @click="randomName">다시 한번 더!</button>
+    <div class="randomBox__contents">
+      <p class="randomBox__contents--text">{{ randomWord }}</p>
+      <button @click="randomName">다시 한번 더!</button>
+    </div>
   </div>
 </template>
 
@@ -16,11 +18,24 @@ export default class randomBox extends Vue {
   mounted() {
     this.randomName();
   }
-  randomName() {
+  randomName(): void {
     const random3 = Math.floor(Math.random() * 3);
     this.randomWord = this.randomList[random3];
   }
 }
 </script>
 
-<style></style>
+<style>
+.randomBox {
+  width: 30vh;
+  height: 80vh;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.randomBox__contents--text {
+  font-size: 100px;
+}
+</style>

@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import randombox from "@/components/randombox.vue";
+import randombox from "@/components/randomBox.vue";
 
 describe("randombox", () => {
   let wrapper;
