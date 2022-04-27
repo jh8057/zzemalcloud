@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       # 의존성 테스트
-      #- name: Install dependencies
+      # - name: Install dependencies
       #  run: yarn
 
       # 내가만든 스크립 돌려보기
@@ -32,6 +32,9 @@ jobs:
 
       #- name: Generate
       #  run: yarn generate
+
+      - name: npm Install
+        run: npm install
 
       - name: Run Test with Jest
         run: npm test
