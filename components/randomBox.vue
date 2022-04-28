@@ -22,6 +22,8 @@ export default class randomBox extends Vue {
     const random3 = Math.floor(Math.random() * 3);
     this.randomWord = this.randomList[random3];
   }
+  //랜덤하게 이름 자동 변경
+  // 버튼 누면 멈추게 -> 룰렛?
 }
 </script>
 

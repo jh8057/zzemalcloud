@@ -1,6 +1,6 @@
 # zzemalcloud
 
-Docker 와 AWS Cloud 를 이용한 서비스를 만들어 보기 위한 프로젝트입니다.
+Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로젝트입니다.
 
 # NUXT
 
@@ -30,7 +30,7 @@ Docker 와 AWS Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 
 2. github action
 
-3. DB (mysql >> firebase 연결 예정)
+3. DB (mysql >> cloud storage 연결 예정)
 
 4. naverAPIs
 
