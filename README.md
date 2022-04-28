@@ -34,7 +34,9 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 
 4. naverAPIs
 
-5. typescript
+5. typescript - @component 형식
+
+6. 간단한 룰렛 게임
 
 ## referece
 
