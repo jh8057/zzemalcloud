@@ -14,10 +14,19 @@ import { Component, Vue } from "vue-property-decorator";
 export default class randomBox extends Vue {
   randomWord: String = "";
   randomList: Array<String> = ["김", "이", "박"];
+  IntervalData: any = null;
 
   mounted() {
     this.randomName();
+
+    //랜덤하게 이름 자동 변경 > 2초마다 변경함수 실행
+    this.IntervalData = setInterval(this.randomName, 1000 * 2);
   }
+
+  beforeDestroy() {
+    clearInterval(this.IntervalData);
+  }
+
   randomName(): void {
     const random3 = Math.floor(Math.random() * 3);
     this.randomWord = this.randomList[random3];
