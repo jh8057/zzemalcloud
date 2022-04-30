@@ -6,7 +6,7 @@
           {{ randomName }}
         </p>
       </transition>
-      <button @click="randomName">다시 한번 더!</button>
+      <!-- <button @click="makeRandomName">다시 한번 더!</button> -->
     </div>
   </div>
 </template>
@@ -87,7 +87,7 @@ export default class randomBox extends Vue {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(20%);
     opacity: 0;
   }
 }
