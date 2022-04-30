@@ -47,3 +47,4 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 - kuber(https://blog.naver.com/PostView.naver?blogId=isc0304&logNo=222507136469)
 
 - test-jest 만들고 github action에서 자동 테스트 하도록 설정하기
+- vue transision : [link](https://kr.vuejs.org/v2/guide/transitions.html)
