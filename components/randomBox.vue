@@ -75,11 +75,11 @@ export default class randomBox extends Vue {
 }
 @keyframes slideFromLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-20%);
   }
   to {
     transform: translateX(0%);
-    opacity: 0.5;
+    opacity: 0.9;
   }
 }
 @keyframes slidetoRight {
