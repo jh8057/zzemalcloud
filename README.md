@@ -16,14 +16,6 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 
 ---
 
-# docker build
-
-- docker build -t jhkim/node .
-
-# docker run
-
-- docker run -p 5000:8080 jhkm/node
-
 ## CONTENTS
 
 1. JWT 토큰 생성
@@ -38,7 +30,7 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 
 6. 간단한 룰렛 게임
 
-## referece
+## reference
 
 - prettier Option : [link](https://prettier.io/docs/en/options.html)
 - cloude storage : [link](https://cloud.google.com/storage/docs/introduction?hl=ko)
@@ -48,3 +40,13 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 
 - test-jest 만들고 github action에서 자동 테스트 하도록 설정하기
 - vue transision : [link](https://kr.vuejs.org/v2/guide/transitions.html)
+
+## Docker
+
+#### docker build
+
+- docker build -t jhkim/node .
+
+#### docker run
+
+- docker run -p 5000:8080 jhkm/node
