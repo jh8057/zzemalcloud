@@ -4,6 +4,7 @@
     <h1>OpenApi</h1>
     <article class="naverSearchKeyword">
       <h2>NaverSearch</h2>
+      <p>검색어를 입력하고 버튼을 눌러주세요</p>
       <button @click="getNaverSearch">click</button>
       <input v-model="keyword" />
 
@@ -18,7 +19,7 @@
       <h2>NaverTrend</h2>
       <div>localhost:3000에서 해야됨</div>
       <button @click="getNaverTrend">trend</button>
-      <ul v-if="trend">
+      <ul v-if="!isEmptyTrend">
         <li>{{ trendTitle }}</li>
         <li>{{ trendKeyword }}</li>
         <li v-for="data in trendData" :key="data.period">
@@ -75,6 +76,9 @@ export default {
     },
     trendData() {
       return this.trend.data || [];
+    },
+    isEmptyTrend() {
+      return Object.keys(this.trend).length === 0;
     },
   },
   methods: {
