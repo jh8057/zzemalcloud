@@ -35,7 +35,6 @@ export default class randomBox extends Vue {
   makeRandomName(): void {
     let random3 = Math.floor(Math.random() * 3);
     if (this.random3 === random3) random3 = (random3 + 1) % 3;
-    console.log(random3);
     this.random3 = random3;
   }
 
