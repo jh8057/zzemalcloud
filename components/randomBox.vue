@@ -7,6 +7,7 @@
         </p>
       </transition>
       <!-- <button @click="makeRandomName">다시 한번 더!</button> -->
+      <button @click="stopRandom">멈춰!</button>
     </div>
   </div>
 </template>
@@ -21,6 +22,11 @@ export default class randomBox extends Vue {
   show: boolean = false;
   random3: number = 0;
 
+  // computed
+  get randomName(): String {
+    return this.randomList[this.random3];
+  }
+
   mounted() {
     this.makeRandomName();
 
@@ -32,14 +38,14 @@ export default class randomBox extends Vue {
     clearInterval(this.IntervalData);
   }
 
+  // methods
   makeRandomName(): void {
     let random3 = Math.floor(Math.random() * 3);
     if (this.random3 === random3) random3 = (random3 + 1) % 3;
     this.random3 = random3;
   }
-
-  get randomName(): String {
-    return this.randomList[this.random3];
+  stopRandom() {
+    clearInterval(this.IntervalData);
   }
 }
 </script>
