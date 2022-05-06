@@ -8,6 +8,8 @@
       </transition>
       <!-- <button @click="makeRandomName">다시 한번 더!</button> -->
       <button @click="buttonAction">{{ buttonName }}</button>
+      <button @click="speedUp">속도 X 2</button>
+      <button @click="speedDown">속도 / 2</button>
     </div>
   </div>
 </template>
@@ -21,6 +23,7 @@ export default class randomBox extends Vue {
   IntervalData: any = null;
   show: boolean = false;
   random3: number = 0;
+  speedNum: number = 2000;
 
   //buttom
   running: boolean = true;
@@ -38,7 +41,7 @@ export default class randomBox extends Vue {
     this.makeRandomName();
 
     //랜덤하게 이름 자동 변경 > 2초마다 변경함수 실행
-    this.IntervalData = setInterval(this.makeRandomName, 1000 * 2);
+    this.IntervalData = setInterval(this.makeRandomName, this.speedNum);
   }
 
   beforeDestroy() {
@@ -56,7 +59,7 @@ export default class randomBox extends Vue {
     if (this.running) {
       this.stopRandom();
     } else {
-      this.runRandom();
+      this.startRandom();
     }
   }
   stopRandom() {
@@ -64,9 +67,20 @@ export default class randomBox extends Vue {
     clearInterval(this.IntervalData);
   }
 
-  runRandom() {
+  speedUp() {
+    this.speedNum = this.speedNum / 2;
+    this.stopRandom();
+    this.startRandom();
+  }
+  speedDown() {
+    this.speedNum = this.speedNum * 2;
+    this.stopRandom();
+    this.startRandom();
+  }
+
+  startRandom() {
     this.running = true;
-    this.IntervalData = setInterval(this.makeRandomName, 1000 * 2);
+    this.IntervalData = setInterval(this.makeRandomName, this.speedNum);
   }
 }
 </script>
@@ -87,12 +101,12 @@ export default class randomBox extends Vue {
 
 .fade-enter-active {
   /* 동작과정 */
-  animation: slideFromLeft 0.5s;
+  animation: slideFromLeft 0.2s;
 }
 .fade-leave-active {
   /* 동작과정 */
   /* transition: opacity 0.5s; */
-  animation: slidetoRight 0.5s;
+  animation: slidetoRight 0.2s;
 }
 .fade-enter,
 .fade-leave-to {
