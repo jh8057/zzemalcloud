@@ -4,9 +4,13 @@
     <li>
       <div class="Diarycomp__contents" :style="stylecontents">
         <div class="DiaryComp__head">
-          <p class="title">{{ title }}</p>
-          <p class="day">{{ RegDate }}</p>
-          <p class="icons">{{ icons }}</p>
+          <div class="DiaryComp__head--left">
+            <p class="title">{{ title }}</p>
+          </div>
+          <div class="DiaryComp__head--right">
+            <p class="day">{{ RegDate }}</p>
+            <p class="icons">{{ icons }}</p>
+          </div>
         </div>
         <div class="DiaryComp__main">
           <p class="DiaryComp__main--text">
@@ -43,7 +47,8 @@ export default {
   padding: 0;
 }
 .Diarycomp__contents {
-  width: 100%;
+  margin: auto;
+  width: 80%;
   border-radius: 20px;
 }
 .DiaryComp__head {
@@ -57,5 +62,9 @@ export default {
 .DiaryComp__main--text {
   padding: 10px;
   margin: 0;
+}
+
+.DiaryComp__head--right {
+  display: flex;
 }
 </style>
