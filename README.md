@@ -40,6 +40,7 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 
 - test-jest 만들고 github action에서 자동 테스트 하도록 설정하기
 - vue transision : [link](https://kr.vuejs.org/v2/guide/transitions.html)
+- MVVM : Model - View - ViewModel [link](https://goodteacher.tistory.com/195)
 
 ## Docker
 
