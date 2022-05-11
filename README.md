@@ -42,6 +42,9 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 -   vue transision : [link](https://kr.vuejs.org/v2/guide/transitions.html)
 -   MVVM : Model - View - ViewModel [link](https://goodteacher.tistory.com/195)
 -   QRCode : OpenApi [link](https://www.qrtag.net/api/)
+-   vue-Typescript : Using extend [link](https://kyounghwan01.github.io/blog/TS/vue-use-typescript/#vue-js-%E1%84%8C%E1%85%A9%E1%86%BC%E1%84%92%E1%85%A1%E1%86%B8-%E1%84%8B%E1%85%A8%E1%84%89%E1%85%B5)
+-   vue-Typescript : [link](https://romeoh.tistory.com/entry/VUE-TYPESCRIPT-Vuex-Interface%EB%A5%BC-%EA%B5%AC%ED%98%84%ED%95%98%EB%8A%94-Store)
+-   vue-Typescript : [link](https://kdydesign.github.io/2019/04/06/vuejs-vuex-helper/)
 
 ## Docker
 

@@ -9,6 +9,10 @@
         <div>{{ answer }}</div>
 
         <qr-code />
+
+        <hr />
+        <h2>Store</h2>
+        <use-store />
     </div>
 </template>
 
@@ -16,11 +20,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import message from '~/components/message.vue';
 import QrCode from '~/components/QrCode.vue';
+import UseStore from '~/components/UseStore.vue';
 
 @Component({
     components: {
         message,
         QrCode,
+        UseStore,
     },
 })
 @Component
