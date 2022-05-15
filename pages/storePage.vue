@@ -1,5 +1,8 @@
 <template>
     <div class="storePage">
+        <h1>Store</h1>
+
+        <h2>state</h2>
         {{ click }}
     </div>
 </template>
@@ -14,7 +17,10 @@ export default {
         storeCompTwo,
     },
     computed: {
-        ...mapState(['multi/click']),
+        ...mapState('multi', {
+            //type
+            click: (state: any) => state.click,
+        }),
     },
 };
 </script>
