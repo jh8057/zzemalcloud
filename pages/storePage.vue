@@ -1,15 +1,15 @@
 <template>
     <div class="storePage">
-        <h1>Store</h1>
-
-        <h2>state</h2>
-        {{ click }}
+        <h1>store</h1>
+        <store-comp-one />
+        <hr />
+        <store-comp-two />
     </div>
 </template>
 
 <script lang="ts">
 import storeCompOne from '~/components/storeCompOne.vue';
-import storeCompTwo from '~/components/storeCompOne.vue';
+import storeCompTwo from '~/components/storeCompTwo.vue';
 import { mapState } from 'vuex';
 export default {
     components: {
