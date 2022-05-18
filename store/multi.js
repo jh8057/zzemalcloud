@@ -4,6 +4,7 @@ export const state = () => ({
     arr: [],
     click: 0,
     from: '',
+    num: 0,
 });
 
 export const mutations = {
@@ -16,6 +17,9 @@ export const mutations = {
     changeFrom(state, payload) {
         state.from = payload;
     },
+    changeNum(state, payload) {
+        state.num = payload;
+    },
 };
 
 export const actions = {
@@ -27,6 +31,9 @@ export const actions = {
     },
     addFrom(context, payload) {
         context.commit('changeFrom', payload);
+    },
+    clickNum(context, payload) {
+        context.commit('changeNum', payload);
     },
 };
 
