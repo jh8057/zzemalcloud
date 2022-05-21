@@ -1,0 +1,13 @@
+// 실행명령어
+// npx sass --watch assets/styleSCSS.scss assets/styleSCSS.css
+.UselessFact {
+    // background-color: darksalmon;
+    h2 {
+        color: rgb(23, 7, 133);
+    }
+    button {
+        color: darkblue;
+        background-color: skyblue;
+        border-radius: 20px;
+    }
+}
