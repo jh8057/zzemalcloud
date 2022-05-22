@@ -15,7 +15,8 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "hello": "echo hello world",
     "jestwatch": "jest --watch",
-    "jestwatchall": "jest --watchAll"
+    "jestwatchall": "jest --watchAll",
+    "scss" : "npx sass --watch assets/styleSCSS.scss assets/styleSCSS.css"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
