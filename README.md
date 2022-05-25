@@ -46,6 +46,8 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 -   vue-Typescript : [link](https://romeoh.tistory.com/entry/VUE-TYPESCRIPT-Vuex-Interface%EB%A5%BC-%EA%B5%AC%ED%98%84%ED%95%98%EB%8A%94-Store)
 -   vue-Typescript : [link](https://kdydesign.github.io/2019/04/06/vuejs-vuex-helper/)
 -   sweetalert2 : [link](https://sweetalert2.github.io/#examples)
+-   css-animation : [link](https://ldrerin.tistory.com/397)
+-   ES6 Class : [link](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes)
 
 ## Docker
 
