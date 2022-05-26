@@ -37,7 +37,6 @@ export default {
                 memPW: this.memPW,
             };
             let result = await this.$axios.$post('api/user/login', params);
-            console.log(result);
             if (result.token) {
                 this.token = result.token;
 

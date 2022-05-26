@@ -1,6 +1,8 @@
 <template>
     <div>
         <h2>Class Object</h2>
+        <button @click="makeSquare">make square</button>
+        {{ square }}
     </div>
 </template>
 
@@ -28,10 +30,15 @@ class Rectangle implements RecType {
     // }
 }
 export default {
+    data() {
+        return {
+            square: {},
+        };
+    },
     methods: {
         makeSquare() {
             const square = new Rectangle(10, 10);
-            return square;
+            this.square = square;
         },
     },
 };
