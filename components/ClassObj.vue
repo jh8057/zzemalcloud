@@ -2,43 +2,51 @@
     <div>
         <h2>Class Object</h2>
         <button @click="makeSquare">make square</button>
-        {{ square }}
+        {{ square }}<br />
+        <button @click="getArea">get area</button>
+        {{ area }}
     </div>
 </template>
 
 <script lang="ts">
 interface RecType {
-    height: Number;
-    width: Number;
+    height: number;
+    width: number;
+    area: number;
 }
 
 class Rectangle implements RecType {
-    height: Number;
-    width: Number;
+    height: number;
+    width: number;
 
-    constructor(height: Number, width: Number) {
+    constructor(height: number, width: number) {
         this.height = height;
         this.width = width;
     }
     // Getter
-    // get area(): Number {
-    //     return this.calcArea();
-    // }
+    get area(): number {
+        return Rectangle.calcArea(this.height, this.width);
+    }
     // 메서드
-    // calcArea(): Number {
-    //     return this.height * this.width;
-    // }
+    static calcArea(h: number, w: number): number {
+        return h * w;
+    }
 }
 export default {
     data() {
         return {
             square: {},
+            area: 0,
         };
     },
     methods: {
         makeSquare() {
             const square = new Rectangle(10, 10);
             this.square = square;
+        },
+        getArea() {
+            const square = new Rectangle(10, 10);
+            this.area = square.area;
         },
     },
 };
