@@ -39,6 +39,11 @@ export default {
             area: 0,
         };
     },
+    computed: {
+        basicSqaure() {
+            return new Rectangle(10, 10);
+        },
+    },
     methods: {
         makeSquare() {
             const square = new Rectangle(10, 10);
