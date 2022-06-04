@@ -48,6 +48,7 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 -   sweetalert2 : [link](https://sweetalert2.github.io/#examples)
 -   css-animation : [link](https://ldrerin.tistory.com/397)
 -   ES6 Class : [link](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes)
+-   electron : [link](https://www.electronjs.org/)
 
 ## Docker
 
