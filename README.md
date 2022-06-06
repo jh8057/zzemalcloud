@@ -49,6 +49,10 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 -   css-animation : [link](https://ldrerin.tistory.com/397)
 -   ES6 Class : [link](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes)
 -   electron : [link](https://www.electronjs.org/) >> nuxt는 별도의 설치가 필요해보여서 vue, vanilaJs로 하는게 좋아보인다.
+-   reactive : [link](https://v3.ko.vuejs.org/guide/reactivity-fundamentals.html#%E1%84%87%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%90%E1%85%A2-%E1%84%89%E1%85%A5%E1%86%AB%E1%84%8B%E1%85%A5%E1%86%AB%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5)
+-   composition API : [link](https://joshua1988.github.io/vue-camp/vue3.html#%E1%84%80%E1%85%A1%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A1-%E1%84%92%E1%85%A1%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A3%E1%86%BC)
+-   CORS : [link](https://valuefactory.tistory.com/1141)
+-   CORS : [link](https://joshua1988.github.io/vue-camp/front-dev.html#%E1%84%8B%E1%85%AE%E1%84%83%E1%85%A2-rest-api%E1%84%8B%E1%85%A6-%E1%84%83%E1%85%A2%E1%84%92%E1%85%A1%E1%86%AB-%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A2)
 
 ## Docker
 
