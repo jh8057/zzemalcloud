@@ -32,7 +32,7 @@ jobs:
             #  run: yarn generate
 
             - name: npm Install
-              run: npm ci
+              run: npm install
 
             - name: Run Test with Jest
               run: npm test
