@@ -10,6 +10,7 @@
             <nuxt-link to="/randomPage"> random Word </nuxt-link><br />
             <nuxt-link to="/storePage"> Store </nuxt-link><br />
             <nuxt-link to="/ClassPage"> Class </nuxt-link><br />
+            <nuxt-link to="/svg"> SVG </nuxt-link><br />
         </article>
         <footer-one />
     </div>
