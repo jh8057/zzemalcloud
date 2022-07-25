@@ -3,38 +3,36 @@ name: zzemal github action
 on: [push, pull_request]
 
 jobs:
-  hello_and_build:
-    runs-on: ${{ matrix.os }}
+    hello_and_build:
+        runs-on: ${{ matrix.os }}
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [16]
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+                node: [16]
 
-    steps:
-      # root 위치로 이동
-      - name: Checkout
-        uses: actions/checkout@master
+        steps:
+            # root 위치로 이동
+            - name: Checkout
+              uses: actions/checkout@master
 
-      # node 환경 설치?
-      - name: Setup node env
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: ${{ matrix.node }}
+            # node 환경 설치?
+            - uses: actions/checkout@v3
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v3.3.0
+              with:
+                  node-version: 16.x
+                  cache: 'npm'
 
-      # 의존성 테스트
-      # - name: Install dependencies
-      #  run: yarn
+            # 내가만든 스크립 돌려보기
+            - name: Hello
+              run: npm run hello
 
-      # 내가만든 스크립 돌려보기
-      - name: Hello
-        run: npm run hello
+            #- name: Generate
+            #  run: yarn generate
 
-      #- name: Generate
-      #  run: yarn generate
+            - name: npm Install
+              run: npm ci
 
-      - name: npm Install
-        run: npm install
-
-      - name: Run Test with Jest
-        run: npm test
+            - name: Run Test with Jest
+              run: npm test
