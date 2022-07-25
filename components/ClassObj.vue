@@ -1,10 +1,8 @@
 <template>
     <div>
         <h2>Class Object</h2>
-        <button @click="makeSquare">make square</button>
-        {{ square }}<br />
-        <button @click="getArea">get area</button>
-        {{ area }}
+        <div>square : {{ basicSqaure }}</div>
+        <div>area : {{ getArea }}</div>
     </div>
 </template>
 
@@ -43,15 +41,8 @@ export default {
         basicSqaure() {
             return new Rectangle(10, 10);
         },
-    },
-    methods: {
-        makeSquare() {
-            const square = new Rectangle(10, 10);
-            this.square = square;
-        },
         getArea() {
-            const square = new Rectangle(10, 10);
-            this.area = square.area;
+            return new Rectangle(10, 10).area;
         },
     },
 };
