@@ -56,7 +56,8 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 
 -   vercel : 무료 서버 배포 [link](https://vercel.com/new)
 -   svg : [link](https://opentutorials.org/course/2418/13691)
--   svg-animation : [link](https://chpofo.tistory.com/47)
+-   svg-animation : [link](https://ordinary-code.tistory.com/25)
+-   nth-child: [link](https://developer.mozilla.org/ko/docs/Web/CSS/:nth-child)
 
 ## Docker
 

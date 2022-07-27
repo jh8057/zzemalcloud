@@ -119,9 +119,22 @@
             </svg>
         </div>
         <!-- 3 -->
-
         <article>
             <h1>moving sign</h1>
+            <svg width="800" height="160" viewBox="-10 -120 800 160">
+                <text class="svg_ordinary">ORDINARY CODE</text>
+            </svg>
+        </article>
+        <article>
+            <h1>appear sign</h1>
+            <svg width="400" height="160" viewBox="-10 0 400 160">
+                <text class="svg_code" x="0" y="50%">Z</text>
+                <text class="svg_code" x="47" y="50%">Z</text>
+                <text class="svg_code" x="93" y="50%">E</text>
+                <text class="svg_code" x="135" y="50%">M</text>
+                <text class="svg_code" x="193" y="50%">A</text>
+                <text class="svg_code" x="237" y="50%">L</text>
+            </svg>
         </article>
     </div>
 </template>
@@ -130,4 +143,73 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.svg_ordinary {
+    font-family: 'Staatliches', cursive;
+    font-size: 6em;
+    fill: #f1c164;
+    stroke: black;
+    stroke-width: 3px;
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 0;
+    animation: stroke 3s linear;
+}
+@keyframes stroke {
+    0% {
+        stroke-dashoffset: 400px;
+    }
+    100% {
+        stroke-dashoffset: 0px;
+    }
+}
+.svg_code {
+    font-family: 'Staatliches', cursive;
+    font-size: 6em;
+    stroke-dasharray: 400px;
+    fill: transparent;
+    animation: strokeTwo 1s linear;
+    animation-fill-mode: forwards;
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 0;
+}
+@keyframes strokeTwo {
+    0% {
+        opacity: 0;
+        stroke: #f1c164;
+        stroke-width: 3px;
+        stroke-dashoffset: 400px;
+    }
+    70% {
+        fill: transparent;
+    }
+    100% {
+        opacity: 100;
+        fill: #f1c164;
+        stroke-dashoffset: 0px;
+        stroke: black;
+        stroke-width: 3px;
+    }
+}
+
+.svg_code:nth-child(1) {
+    animation-delay: 0s;
+}
+.svg_code:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.svg_code:nth-child(3) {
+    animation-delay: 1s;
+}
+.svg_code:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.svg_code:nth-child(5) {
+    animation-delay: 2s;
+}
+.svg_code:nth-child(6) {
+    animation-delay: 2.5s;
+}
+</style>
