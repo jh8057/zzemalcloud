@@ -34,6 +34,8 @@ builder.build();
 // }
 
 //swagger
+const swagger = require('./routes/swagger');
+app.use('/swagger', swagger);
 
 server.listen(port, () => {
     console.log(`Server is listening on port: ${port}`);
