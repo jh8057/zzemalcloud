@@ -1,20 +1,7 @@
 # zzemalcloud
 
 Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로젝트입니다.
-
-# NUXT
-
-### Page
-
--   기본적인 페이지 구성
-
-#### OpenAPI
-
--   [LINK](https://www.data.go.kr/data/15097524/openapi.do)
--   [링크](https://geonlee.tistory.com/187)
--   [네이버 오픈 API](https://developers.naver.com/docs/common/openapiguide/)
-
----
+Nuxt.js, jest 를 사용했습니다.
 
 ## CONTENTS
 
@@ -64,6 +51,8 @@ Docker 와 GCP Cloud 를 이용한 서비스를 만들어 보기 위한 프로�
 -   swagger [link](https://doqtqu.tistory.com/283)
 -   aws : [link](https://aws.amazon.com/ko/)
 -   history API : [link](https://developer.mozilla.org/ko/docs/Web/API/History_API)
+-  OpenAPI [링크](https://geonlee.tistory.com/187)
+- naver OpenAPI [네이버 오픈 API](https://developers.naver.com/docs/common/openapiguide/)
 
 ## Docker
 
